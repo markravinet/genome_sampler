@@ -8,9 +8,9 @@ How does the script work? First it looks at the fai file and filters out any sca
 
 The script also tests whether there is any overlap between these extracted coordinates and an annotated gene. If so, it will try again. If not, it will look for the next loci. Once the whole genome is sampled, it will then write out a BED file - i.e. a file with a chromosome name, start coordinates and stop coordinates with a line for each loci. One can run the script from the command line using the following command:
 
-[code language="bash"]
+```
 R --slave --args ref.fai annotate_table.txt 2000 500000 out.BED<cmd_generate_random_coords_050914.R
-[/code]
+```
 
 Where 2000 and 500000 in this case tell the script to look for 2000 bp loci spaced at least 500 Kbp apart. 
 
